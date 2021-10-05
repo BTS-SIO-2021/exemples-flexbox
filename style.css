@@ -1,0 +1,90 @@
+.conteneur-flexible {
+    background-color: #0AD;
+    border : 2px solid blue;
+    font-size: 20px;
+    display: flex;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+.modification-hauteur {
+    height: 1500px;
+}
+
+.element-flexible {
+    background-color:  #0DA;
+    border : 2px solid green;
+    width: 25%;
+    height: 25%;
+    padding: 10px 0;
+    margin: 5px;
+    text-align: center;
+    /*flex-basis: 25%;*/
+}
+
+.ligne {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.ligne-inverse {
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.colonne {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.colonne-inverse {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.wrap {
+    /*flex-wrap: nowrap; valeur par défaut de la propriété */
+    flex-wrap : wrap;
+}
+
+.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+/*
+
+C'est sûr l'élément parent que je change la propriété display en lui associant la valeur flex afin de pouvoir utiliser toutes les propriétés merveilleuses du modèle Flexbox. 
+Donc mon élément parent devient ce qu'on appelle communément un container ou flex container. 
+
+Et dans cet élément parent (flex container) tous mes éléments enfants deviennent des éléments ou items flex (ou items flexibles) 
+
+En fonction de si mon élément est un container flex ou un item flex, je pourrai manipuler différentes propriétés des flexbox :
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
+Tout container flex est une boîte avec 2 axes : 
+1) un axe principal (main axis)
+2) un axe secondaire (cross axis)
+
+La propriété flex-direction est celle qui établit l'axe principal
+
+La propriété justify-content est celle qui définit comment les items flex sont positionnés le long de l'axe principal
+
+La propriété align-items est celle qui définit comment les items flex sont positionnés le long de l'axe secondaire
+
+La direction des items et comment mes items sont distribués sur mes axes
+
+Mes axes (secondaire et principal) sont déterminés par la valeur de flex-direction.
+
+flex-direction : row = mon axe principal est une ligne (horizontal), son début est à gauche et sa fin à droite
+
+flex-direction : row-reverse = mon axe principal est une ligne (horizontal), son début est à droite et sa fin à gauche
+
+flex-direction : column = mon axe principal est une colonne (vertical) , son début est en haut et sa fin est en bas
+
+flex-direction : column-reverse = mon axe principal est une colonne (vertical), son début est en bas et sa fin est en haut
+*/
